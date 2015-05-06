@@ -23,7 +23,7 @@ GeditPanel .notebook {
 
 GeditPanel .notebook tab,
 GeditWindow .notebook tab {
-    border-radius: 3px;
+    border-radius: 0px;
 }
 
 GeditViewFrame .gedit-search-slider {

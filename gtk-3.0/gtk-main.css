@@ -8,6 +8,12 @@
 @define-color tooltip_bg_color #000000;
 @define-color tooltip_fg_color #ffffff;
 
+@define-color notebook_tab_inactive_bg_color #acacac;
+@define-color notebook_tab_inactive_fg_color alpha (@text_color, 0.7);
+@define-color notebook_tab_active_bg_color @bg_color;
+@define-color notebook_tab_active_fg_color @text_color;
+
+
 /* misc colors used by gtk+
  *
  * Gtk doesn't currently expand color variables for style properties. Thus,

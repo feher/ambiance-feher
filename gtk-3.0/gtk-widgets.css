@@ -913,7 +913,13 @@ GtkComboBox .menu .menuitem *:insensitive {
 
 /* give active tab a background, as it might be dragged across of others when reordering */
 .notebook tab:active {
-    background-color: @bg_color;
+    background-color: @notebook_tab_active_bg_color;
+    color: @notebook_tab_active_fg_color;
+}
+
+.notebook tab {
+    background-color: @notebook_tab_inactive_bg_color;
+    color: @notebook_tab_inactive_fg_color;
 }
 
 .notebook.header {
@@ -966,11 +972,20 @@ GtkComboBox .menu .menuitem *:insensitive {
 .notebook tab GtkLabel {
     border: 1px solid transparent;
     border-radius: 5px;
+    background-color: @notebook_tab_inactive_bg_color;
+    color: @notebook_tab_inactive_fg_color;
 }
 
 .notebook:focus tab GtkLabel.active-page {
     border-color: @focus_color;
-    background-color: @focus_bg_color;
+    background-color: @notebook_tab_active_bg_color;
+    color: @notebook_tab_active_fg_color;
+}
+
+.notebook .active-page,
+.notebook tab .active-page GtkLabel {
+    background-color: @notebook_tab_active_bg_color;
+    color: @notebook_tab_active_fg_color;
 }
 
 .notebook GtkDrawingArea {
