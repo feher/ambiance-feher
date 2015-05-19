@@ -924,21 +924,23 @@ GtkComboBox .menu .menuitem *:insensitive {
 
 .notebook.header {
     border-width: 0; /* set below depending on position of tab bar */
-    border-color: shade (@bg_color, 0.82);
-    border-style: solid;
+/*    border-color: shade (@bg_color, 0.82);
+    border-style: solid;*/
 }
 
 /* Draw a border between tabs and content ... */
-.notebook.header.top { border-bottom-width: 1px; }
-.notebook.header.right { border-left-width: 1px; }
-.notebook.header.left { border-right-width: 1px; }
-.notebook.header.bottom { border-top-width: 1px; }
+.notebook.header.top { border-bottom-width: 5px;  }
+.notebook.header.right { border-left-width: 5px;  }
+.notebook.header.left { border-right-width: 5px; }
+.notebook.header.bottom { border-top-width: 5px; }
+
 
 /* ... unless the content is in a frame (thus having a border itself */
 .notebook.header.frame.top { border: none; }
 .notebook.header.frame.right { border: none; }
 .notebook.header.frame.right { border: none; }
 .notebook.header.frame.bottom { border: none; }
+
 
 .notebook tab.top {
     border-image: -gtk-gradient (linear, left top, left bottom,
@@ -970,6 +972,7 @@ GtkComboBox .menu .menuitem *:insensitive {
 
 /* Draw a focus ring around labels in tabs */
 .notebook tab GtkLabel {
+    border-color: #ff0000;
     border: 1px solid transparent;
     border-radius: 5px;
     background-color: @notebook_tab_inactive_bg_color;
@@ -977,19 +980,25 @@ GtkComboBox .menu .menuitem *:insensitive {
 }
 
 .notebook:focus tab GtkLabel.active-page {
-    border-color: @focus_color;
-    background-color: @notebook_tab_active_bg_color;
-    color: @notebook_tab_active_fg_color;
+    border-color: #ff0000;
+/*    background-color: @notebook_tab_active_bg_color;*/
+    background-color: #ff0000;
+/*    color: @notebook_tab_active_fg_color;*/
+    color: #ff0000;
 }
 
 .notebook .active-page,
 .notebook tab .active-page GtkLabel {
-    background-color: @notebook_tab_active_bg_color;
+    /*background-color: #ff0000;*/
+/*    background-color: @notebook_tab_active_bg_color;*/
     color: @notebook_tab_active_fg_color;
+    background-color: -gtk-gradient (linear, left bottom, left top,
+                                 from (alpha (shade (@bg_color, 0.9), 0.0)),
+                                 to (shade (@bg_color, 0.9))) 1;
 }
 
 .notebook GtkDrawingArea {
-        background-color: shade (@bg_color, 1.02);
+    background-color: #ff0000; /*shade (@bg_color, 1.02);*/
 }
 
 /******************
