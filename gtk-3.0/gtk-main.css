@@ -13,6 +13,7 @@
 @define-color notebook_tab_active_bg_color @bg_color;
 @define-color notebook_tab_active_fg_color @text_color;
 
+@define-color scroll_slider_bg_color #8c8c8c;
 
 /* misc colors used by gtk+
  *

@@ -1220,15 +1220,15 @@ GtkScale.mark {
 .scrollbar.button.vertical {
     border-width: 1px;
     border-style: solid;
-    border-color: shade (@bg_color, 0.86);
+    border-color: @scroll_slider_bg_color;
     background-image: -gtk-gradient (linear, left top, right top,
-                                     from (shade (@button_bg_color, 1.08)),
-                                     color-stop (0.5, @button_bg_color),
-                                     to (shade (@button_bg_color, 0.94)));
-    box-shadow: inset 1px 0 shade (@bg_color, 1.1),
-                inset -1px 0 shade (@bg_color, 1.01),
-                inset 0 1px shade (@bg_color, 1.1),
-                inset 0 -1px shade (@bg_color, 1.1);
+                                     from (shade (@scroll_slider_bg_color, 1.08)),
+                                     color-stop (0.5, @scroll_slider_bg_color),
+                                     to (shade (@scroll_slider_bg_color, 0.94)));
+    box-shadow: inset 1px 0 shade (@scroll_slider_bg_color, 1.1),
+                inset -1px 0 shade (@scroll_slider_bg_color, 1.01),
+                inset 0 1px shade (@scroll_slider_bg_color, 1.1),
+                inset 0 -1px shade (@scroll_slider_bg_color, 1.1);
 }
 
 .scrollbar.slider.horizontal,
